@@ -7,13 +7,6 @@ import asset.pipeline.AssetPipelineConfigHolder
 
 /**
  * Use 6to5 to convert EcmaScript6 to ES5
- * - require es6to5runtime.js, namespace.js & runtime.js
- * - install es6to5
- * - best practice, generate your own es6to5runtime.js
- * - optionally set grails.assets.es6to5.command = 6to5 command if not /usr/local/bin/6to5
- * - optionally set namespace prefix
- * TODO:
- * - compile 6to5 using browserify and use rhino.js to run?
  */
 class Es6to5Processor extends AbstractProcessor {
 

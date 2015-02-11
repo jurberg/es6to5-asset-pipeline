@@ -11,11 +11,10 @@ grails.project.dependency.resolution = {
         mavenCentral()
     }
 
-    dependencies {
-    }
+    dependencies {}
 
     plugins {
-        compile ':asset-pipeline:2.1.0'
+        compile ':asset-pipeline:2.1.1'
         build(":release:3.0.1", ":rest-client-builder:1.0.3") {
             export = false
         }
