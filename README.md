@@ -28,10 +28,11 @@ for more details
 ```
 - Place your files in assets/javascripts with file extension of .es6
 - Configure using settings if desired (add to grails.assets)
-Setting          | Description                                  | Default
--------          | -----------                                  | -------
-es6to5.command   | the full path to the 6to5 executable         | /usr/local/bin/6to5
-namespace.prefix | the prefix to add to your module's namespace |
+
+| Setting          | Description                                  | Default |
+| -------          | -----------                                  | ------- |
+| es6to5.command   | the full path to the 6to5 executable         | /usr/local/bin/6to5 |
+| namespace.prefix | the prefix to add to your module's namespace | |
 
 # Under the Covers
 The asset pipeline looks for any files in the assets/javascripts folder with the extension of .es6 and processes them. 
