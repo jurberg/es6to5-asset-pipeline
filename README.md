@@ -28,17 +28,18 @@ for more details
 ```
 - Place your files in assets/javascripts with file extension of .es6
 - Configure using settings if desired (add to grails.assets)
-Setting          | Description                                  | Default
--------          | -----------                                  | -------
-es6to5.command   | the full path to the 6to5 executable         | /usr/local/bin/6to5
-namespace.prefix | the prefix to add to your module's namespace |
+
+| Setting          | Description                                  | Default |
+| -------          | -----------                                  | ------- |
+| es6to5.command   | the full path to the 6to5 executable         | /usr/local/bin/6to5 |
+| namespace.prefix | the prefix to add to your module's namespace | |
 
 # Under the Covers
 The asset pipeline looks for any files in the assets/javascripts folder with the extension of .es6 and processes them. 
 It will use the import statement in the file to determine what files you depend upon, so you don't need to add
 a separate asset-pipepline directive to include dependencies.  It will pass the contents of your file thru the
 6to5 processor with the --runtime flag set.  It will then wrap your code in an IFEE and generate a global 'namespace' 
-that your module will be attached to.  The namespace will be the directory structure of your file with '.__module__.exports' 
+that your module will be attached to.  The namespace will be the directory structure of your file with '.\_\_module\_\_.exports' 
 attached.  The 6to5 compiler will replace any import statements with a 'require("<module>")' statement.  The 
 plugin will replace that with the namespace for the module.
  
@@ -58,7 +59,7 @@ App.controller('HomeCtrl', HomeCtrl);
   
 export default HomeCtrl;
 ```
-The following module will be created on the global context (i.e. the window): app.controller.__module__.exports.  After 
+The following module will be created on the global context (i.e. the window): app.controller.\_\_module\_\_.exports.  After 
 processing, the following HomeCtrl.js file will be produced:
 ```javascript
 (function(module, exports) {
