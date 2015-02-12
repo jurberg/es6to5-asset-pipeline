@@ -1,3 +1,6 @@
+import asset.pipeline.AssetPipelineConfigHolder
+import asset.pipeline.es6to5.Es6AssetFileResolver
+
 // configuration for plugin testing - will not be included in the plugin zip
 
 log4j = {

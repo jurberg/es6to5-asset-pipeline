@@ -2,4 +2,6 @@ target
 *.iml
 .idea
 .DS_Store
-
+plugin.xml
+*.zip
+*.sha1
