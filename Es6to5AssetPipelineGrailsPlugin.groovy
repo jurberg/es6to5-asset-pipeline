@@ -12,9 +12,9 @@ class Es6to5AssetPipelineGrailsPlugin {
     def author = "John Urberg"
     def authorEmail = "jurberg@gmail.com"
     def description = "Provides Ecmascript 6 support for the asset-pipeline static asset management plugin."
-//    def documentation = "http://grails.org/plugin/es6to5-asset-pipeline"
+    def documentation = "https://github.com/jurberg/es6to5-asset-pipeline/blob/master/README.md"
     def license = "MIT"
-//    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
+    def issueManagement = [ system: "GITHUB", url: "https://github.com/jurberg/es6to5-asset-pipeline/issues" ]
     def scm = [ url: "https://github.com/jurberg/es6to5-asset-pipeline" ]
 
     def doWithDynamicMethods = { ctx ->
