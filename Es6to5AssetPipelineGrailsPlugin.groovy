@@ -6,7 +6,7 @@ import asset.pipeline.es6to5.Es6File
 
 class Es6to5AssetPipelineGrailsPlugin {
 
-    def version = "0.2"
+    def version = "0.3"
     def grailsVersion = "2.3 > *"
     def title = "6to5 Asset-Pipeline Plugin"
     def author = "John Urberg"

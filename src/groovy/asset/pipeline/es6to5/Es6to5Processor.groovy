@@ -15,7 +15,7 @@ class Es6to5Processor extends AbstractProcessor {
 
     Es6to5Processor(AssetCompiler precompiler) {
         super(precompiler)
-        es6to5command = AssetPipelineConfigHolder.config?.es6to5?.command ?: '/usr/local/bin/6to5'
+        es6to5command = AssetPipelineConfigHolder.config?.es6to5?.command ?: '/usr/local/bin/babel'
         modulePrefix = AssetPipelineConfigHolder.config?.es6to5?.module.prefix ?: ''
         if (modulePrefix) {
             modulePrefix += '.'
@@ -42,7 +42,7 @@ class Es6to5Processor extends AbstractProcessor {
         String fullPath = new File(assetFile.sourceResolver.baseDirectory, assetFile.path).getAbsolutePath()
         String module = modulePrefix + assetFile.path.replaceAll(/.(es6|js)/, '').replace('/', '.').replace('-', '')
 
-        Process p = "${es6to5command} --runtime ${fullPath}".execute()
+        Process p = "${es6to5command} ${fullPath}".execute()
 
         Scanner err = new Scanner(p.err).useDelimiter("\\A")
         String errorMessage = (err.hasNext() ? err.next() : "")
