@@ -10,7 +10,7 @@ class Es6AssetFileResolver extends FileSystemAssetResolver {
     }
 
     AssetFile getAsset(String relativePath, String contentType = null, String extension = null, AssetFile baseFile = null) {
-        relativePath = relativePath.replaceAll("'", '')
+        relativePath = relativePath.replaceAll("'", '').replaceAll('"', '')
         super.getAsset(relativePath, contentType, extension , baseFile)
     }
 
